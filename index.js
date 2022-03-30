@@ -7,7 +7,7 @@ function fill2DimensionsArray(rows, columns) {
   for (let i = 0; i < rows; i++) {
     arr.push([0]);
     for (let j = 0; j < columns; j++) {
-      arr[i][j] = randomInteger(1, 3);
+      arr[i][j] = randomInteger(1, 5);
     }
   }
 
@@ -23,27 +23,37 @@ console.table(matriz1);
 console.table('------------------------------------------------');
 console.table(matriz2);
 
-const matri3 = [...matriz1];
-for (let i = 0; i < rows; i++) {
-  matri3[i].map((item, index) => {
-    // let result = item + matriz2[index][];
-    // console.log(item);
-    // console.log(index);
+const matriz3 = [];
 
-    for (let j = 0; j < matriz2[index].length; j++) {
-      //   console.log(matriz2[index][j] * item);
+let suma;
 
-      console.log(index);
+// console.log(matriz1.length);
+for (let i = 0; i < matriz1.length; i++) {
+  suma = 0;
+  for (let j = 0; j < matriz2.length; j++) {
+    //   for (let z = 0; z < matriz1[i].length; z++) {
+    // }
+    // console.log(matriz1[i]);
+    // console.log(matriz2[j][i]);
+
+    for (let z = 0; z < matriz2[j].length; z++) {
+      // suma = matriz1[i][z] * matriz2[j][z];
+      console.log(matriz2[j][z] * matriz1[i][z]);
     }
-  });
 
-  //   for (let j = 0; j < columns; j++) {
-  //     console.log(`matriz 1 = ${matriz1[i][j]}`);
-  //     console.log(`matriz 2 = ${matriz2[j][i]}`);
+    // console.log(suma);
+  }
+  //   console.log(
+  //     `${matriz1[i][j]} * ${matriz2[j][i]} = ${matriz1[i][j] * matriz2[j][i]}`
+  //   );
+  //   // suma += matriz1[i][j] * matriz2[j][i];
+  //   console.log(matriz1[i][j] * matriz2[j][i]);
+  // matriz3.push(suma);
 
-  //     matri3[i][j] = matriz1[i][j] * matriz2[j][i];
-  //   }
+  // suma = 0;
+  // console.log(matriz3);
 }
+
 // console.table('------------------------------------------------');
 
 // console.table(matri3);
